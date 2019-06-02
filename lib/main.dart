@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:nearby/login/login_screen.dart';
 import 'package:nearby/repositories/user_repository.dart';
 import 'package:nearby/screens/home_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -41,17 +42,18 @@ class _MyAppState extends State<MyApp> {
           primarySwatch: Colors.blue,
         ),
         home: BlocBuilder(
-          bloc: _authenticationBloc,
-          builder: (BuildContext context, AuthenticationState state) {
-            if (state is Uninitialized) {
-              return SplashScreen();
-            }
-            if (state is Authenticated) {
-              return HomeScreen(name: state.displayName);
-            }
-          }
-
-        ),
+            bloc: _authenticationBloc,
+            builder: (BuildContext context, AuthenticationState state) {
+              if (state is Uninitialized) {
+                return SplashScreen();
+              }
+              if (state is Unauthenticated) {
+                return LoginScreen(userRepository: _userRepository);
+              }
+              if (state is Authenticated) {
+                return HomeScreen(name: state.displayName);
+              }
+            }),
       ),
     );
   }
