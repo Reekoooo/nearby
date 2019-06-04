@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nearby/register/register_screen.dart';
 import 'package:nearby/repositories/user_repository.dart';
-import 'package:nearby/screens/registration_mock_screen.dart';
 
 class CreateAccountButton extends StatelessWidget {
   final UserRepository _userRepository;
