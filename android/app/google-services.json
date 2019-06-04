@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1083022005834",
+    "firebase_url": "https://nearby-abbeb.firebaseio.com",
+    "project_id": "nearby-abbeb",
+    "storage_bucket": "nearby-abbeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083022005834:android:1865127f85800b8f",
+        "android_client_info": {
+          "package_name": "com.uym.nearby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083022005834-q8c938h8gb6m1g56c4qbnmcluvkcp9mi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uym.nearby",
+            "certificate_hash": "d773a3eb5cfdb93adf67f02497037c577c58c408"
+          }
+        },
+        {
+          "client_id": "1083022005834-ihlh1bjr688snaphsmsf9s8jr78disrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAa8vSSN65IhrrSKgpnEFsz5JfKM_JYsAk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083022005834-ihlh1bjr688snaphsmsf9s8jr78disrg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1083022005834-lj73d8mh4dftspiu301pl0i1c3ha9vgv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.uym.nearby"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
