@@ -64,9 +64,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Stream<LoginState> _mapLoginWithGooglePressedToState() async* {
+    yield LoginState.loading();
     try {
       await _userRepository.signInWithGoogle();
-
       yield LoginState.success();
     } catch (e) {
       print(e.toString());
@@ -79,10 +79,8 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
     String password,
   }) async* {
     yield LoginState.loading();
-
     try {
       await _userRepository.signInWithCredentials(email, password);
-
       yield LoginState.success();
     } catch (_) {
       yield LoginState.failure();

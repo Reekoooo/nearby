@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nearby/authentication_bloc/authentication_bloc.dart';
 import 'package:nearby/authentication_bloc/authentication_event.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class HomeScreen extends StatelessWidget {
 
-  final String name;
-  HomeScreen({Key key, @required this.name}) : super(key: key);
+  final FirebaseUser user;
+  HomeScreen({Key key, @required this.user}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Center(child: Text('Welcome $name!')),
+          Center(child: Text('Welcome ${user.uid}!')),
         ],
       ),
     );

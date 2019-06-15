@@ -1,5 +1,6 @@
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 @immutable
 abstract class AuthenticationState extends Equatable {
@@ -12,12 +13,12 @@ class Uninitialized extends AuthenticationState {
 }
 
 class Authenticated extends AuthenticationState {
-  final String displayName;
+  final FirebaseUser user;
 
-  Authenticated(this.displayName) : super([displayName]);
+  Authenticated(this.user) : super([user]);
 
   @override
-  String toString() => 'Authenticated { displayName: $displayName }';
+  String toString() => 'Authenticated { displayName: ${user.displayName} }';
 }
 
 class Unauthenticated extends AuthenticationState {
