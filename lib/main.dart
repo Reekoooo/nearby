@@ -53,6 +53,7 @@ class _MyAppState extends State<MyApp> {
               if (state is Authenticated) {
                 return HomeScreen(user: state.user);
               }
+              return Text("Not Idintified State");
             }),
       ),
     );

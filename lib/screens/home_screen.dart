@@ -29,7 +29,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Center(child: Text('Welcome ${user.uid}!')),
+          Center(child: Text('Welcome ${user.uid}')),
         ],
       ),
     );
